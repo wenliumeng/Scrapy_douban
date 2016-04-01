@@ -39,8 +39,8 @@ class NewBookSpider(CrawlSpider):
     allowed_domains=["book.douban.com"]
     start_urls=["http://book.douban.com/latest?icn=index-latestbook-all"]
     rules=[
-        Rule(LinkExtractor(allow=(r'http://book.douban.com/latest?icn=index-latestbook-all'))),
-        Rule(LinkExtractor(allow=(r'http://book.douban.com/subject/\d+')), callback="parse_item"),
+        Rule(LinkExtractor(allow=(r'https://book.douban.com/latest?icn=index-latestbook-all'))),
+        Rule(LinkExtractor(allow=(r'https://book.douban.com/subject/\d+')), callback="parse_item"),
         # Rule(LinkExtractor(allow=r'http://book.douban.com/subject/26673089'), callback="parse_item"),
     ]
 
