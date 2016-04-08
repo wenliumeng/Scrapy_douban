@@ -11,7 +11,7 @@ def update():
     div = soup.find('div',id='selected-items').find('dl').find('b').string
 
     try:
-        conn=MySQLdb.connect(host='rdsh3r6cb7246v284vdf.mysql.rds.aliyuncs.com',user='my_root',passwd='bf2983710',port=3306)
+        conn=MySQLdb.connect(host='xxx',user='my_root',passwd='xxx',port=3306)
         cur=conn.cursor() 
         conn.select_db('smartkitchens')
         value=[datetime.datetime.now().strftime("%m-%d"),div,'hi rollen','hi rollen']
